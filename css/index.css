@@ -1,0 +1,330 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 95vh;
+  padding: 0 0 5vh 0;
+}
+.headBox {
+  width: 90%;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 0 5%;
+}
+
+.headBox .left header img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.headBox .left header i {
+  font-size: 2.5rem;
+}
+
+.headBox .left p {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.headBox .left strong {
+  font-size: 2rem;
+}
+.headBox .mid {
+  margin: auto;
+}
+
+
+.logoBox {
+  width: 400px;
+  height: 400px;
+  background: #bd1236;
+  border-radius: 50%;
+}
+
+
+.actionBox {
+  width: 90%;
+  padding: 0 5%;
+  display: flex;
+  gap: 4rem;
+}
+
+.actionBox div {
+  width: 200px;
+  padding: 15px;
+  height: 140px;
+  border-radius: 10px;
+  display: flex;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px dashed white;
+  position: relative;
+  background: white;
+  color: white;
+  z-index: 5;
+}
+
+.actionBox .glass {
+  width: 40px;
+  height: 40px;
+  left: 0;
+  top: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  filter: blur(0.6px);
+  transition: 0.4s ease;
+  position: absolute;
+}
+
+.actionBox section:hover .glass {
+  top: -20px;
+}
+
+.actionBox div p {
+  display: flex;
+  flex-direction: column;
+}
+
+.actionBox div strong {
+  font-size: 1.7rem;
+}
+
+.statBox strong{
+  font-size: 1.5rem;
+  margin-left: 70px;
+  color: white;
+}
+.statBox strong sub{
+  width: 40px;
+  background: white;
+  height: 3px;
+  display: block;
+}
+.statBox {
+  width: 530px;
+  position: fixed;
+  top: 10vh;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem 0;
+  right: 10px;
+}
+
+.stats {
+  width: 100%;
+  display: flex;
+  overflow-y: auto;
+  justify-content: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.statBox::-webkit-scrollbar,
+.statBox .stats::-webkit-scrollbar {
+  display: none;
+}
+
+.statBox div {
+  list-style: none;
+  height: 110px;
+  padding: 10px;
+  width: 200px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.statBox div legend {
+  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  justify-content: flex-end;
+  font-size: 0.9rem;
+}
+
+.statBox div legend sub {
+  font-size: 1rem;
+  width: 18px;
+  height: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: white;
+  color: black;
+  rotate: -40deg;
+}
+
+.statBox div p {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.statBox div p span {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.statBox div header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.statBox div header sub {
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  display: block;
+  background: springgreen;
+  border-radius: 50%;
+  top: 0;
+  left: 50px;
+}
+
+.statBox div img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+@media all and (max-width:950px) {
+  .headBox {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .headBox .left,
+  .headBox .mid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .actionBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  }
+
+  .actionBox div {
+    margin: auto;
+  }
+}
+
+@media all and (max-width:650px) {
+  .topNav {
+    flex-direction: column;
+    gap: 0.2rem;
+    height: auto;
+    align-items: center;
+  }
+
+  .topNav nav {
+    font-size: 0.8rem;
+  }
+}
+
+@media all and (max-width:500px) {
+  .toggleNav {
+    display: flex;
+    z-index: 1000;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+  }
+
+  .headBox .mid .logoBox {
+    width: 300px;
+    height: 300px;
+  }
+
+  .topNav nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 1rem 0;
+    z-index: 500;
+    background: black;
+    width: 100%;
+    position: fixed;
+    top: -400px;
+    left: 0;
+    transition: 0.4s ease;
+  }
+
+  .topNav nav.change {
+    top: 0;
+  }
+}
+
+
+@media all and (max-width:1400px) {
+  .page {
+    gap: 2.5rem;
+  }
+
+  .topNav {
+    padding: 3vh 5% 0 5%;
+  }
+
+  .headBox {
+    grid-template-columns: 6fr 4fr;
+  }
+
+  .headBox .right {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .actionBox {
+    justify-content: space-between;
+  }
+
+  .statBox {
+    position: revert;
+    width: 90%;
+    padding: 0 5%;
+    height: auto;
+  }
+
+  .statBox strong {
+    margin: auto;
+  }
+
+  .stats {
+    height: auto;
+    justify-content: space-around;
+  }
+}
+@media all and (max-width:350px) {
+  .headBox .mid .logoBox {
+    width: 200px;
+    height: 200px;
+  }
+
+}

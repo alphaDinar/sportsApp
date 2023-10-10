@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="page">
+    <section class="topNav">
+      <button class="toggleNav material-symbols-outlined" id="toggleNav" onclick="toggleNav()">linear_scale</button>
+      <strong>ESPN</strong>
+      <nav>
+        <a href="">Home</a>
+        <a href="">FAQ </a>
+        <a href="">About</a>
+        <a href="">Login</a>
+        <a href="">Register</a>
+      </nav>
+      <img src="avatar.png" height="50" width="50" style="border-radius: 50%;" alt="">
+    </section>
+    <section class="headBox">
+      <section class="left">
+        <header>
+          <i class="material-symbols-outlined">casino</i>
+          <i class="material-symbols-outlined">attach_money</i>
+          <i class="material-symbols-outlined">robot</i>
+        </header>
+        <p>
+          <strong>The Invicible One, Paul Pogba's Stats are simply stunning</strong>
+          <small style="color: darkgray;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quas in a dolorum,
+            cumque minima eligendi, doloribus repudiandae perferendis, deserunt eum temporibus pariatur vitae quae at
+            voluptas iure vero numquam.</small>
+          <a href="" style="color: wheat;">Create A group -></a>
+        </p>
+        <nav></nav>
+      </section>
+      <section class="mid">
+        <div class="logoBox"></div>
+      </section>
+      <section class="right"></section>
+    </section>
+
+    <section class="actionBox">
+      <div style="background: transparent;">
+        <p>
+          <strong>Join A group</strong>
+          <small>New Posibilites</small>
+        </p>
+      </div>
+      <div style="background: transparent;">
+        <p>
+          <strong>Join A group</strong>
+          <small>New Posibilites</small>
+        </p>
+      </div>
+      <div style="background: white; color: black;">
+        <p>
+          <strong>Join A group</strong>
+          <small>New Posibilites</small>
+        </p>
+      </div>
+    </section>
+
+
+    <section class="statBox">
+      <strong>Groups <sub></sub></strong>
+      <section class="stats">
+        <div class="stat" style="background: #eb8564;">
+          <header>
+            <img src="group.jpg" alt="">
+            <img src="group.jpg" alt="" style="position: relative; left: -10px;">
+            <img src="group.jpg" alt="" style="position: relative; left: -20px;">
+            <small style="position: relative; left: -15px; color: wheat;"> + 10</small>
+            <sub></sub>
+          </header>
+          <small>Blazers</small>
+          <p>
+            <span>GHC 4,500</span>
+          </p>
+          <legend style="text-align: right;">Join <sub class="material-symbols-outlined">arrow_right_alt</sub></legend>
+        </div>
+      </section>
+
+      <script>
+        for (var i = 0; i < 24; i++) {
+          document.querySelector('.stats').appendChild(document.querySelector('.stat').cloneNode(true))
+        }
+      </script>
+    </section>
+
+  </section>
+
+  <script>
+    const subMenu = document.querySelector('.topNav nav')
+    const toggleNav = () => {
+      subMenu.classList.toggle('change')
+    }
+  </script>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
